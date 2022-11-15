@@ -1,5 +1,3 @@
-
-
 __start__: obj __lines_for_space__ ../libs/libInterp4Move.so ../libs/libInterp4Rotate.so ../libs/libInterp4Set.so ../libs/libInterp4Pause.so
 	@echo "  Tworzenie wtyczki zakonczone."
 	@echo
@@ -24,6 +22,7 @@ __lines_for_space__:
 	@echo
 
 
+
 ../libs/libInterp4Rotate.so: obj/Interp4Rotate.o
 	g++ ${LDFLAGS} -o ../libs/libInterp4Rotate.so obj/Interp4Rotate.o
 	@echo
@@ -36,6 +35,7 @@ __lines_for_space__:
 	@echo "  Wtyczka dla polecenia 'Set' zostala utworzona."
 	@echo
 
+
 ../libs/libInterp4Pause.so: obj/Interp4Pause.o
 	g++ ${LDFLAGS} -o ../libs/libInterp4Pause.so obj/Interp4Pause.o
 	@echo
@@ -45,7 +45,7 @@ __lines_for_space__:
 
 
 obj/Interp4Move.o: src/Interp4Move.cpp ../inc/Interp4Command.hh\
-                        inc/Interp4Move.hh 
+                        inc/Interp4Move.hh
 	g++ -c ${CPPFLAGS} -o obj/Interp4Move.o src/Interp4Move.cpp
 
 obj/Interp4Rotate.o: src/Interp4Rotate.cpp ../inc/Interp4Command.hh\
