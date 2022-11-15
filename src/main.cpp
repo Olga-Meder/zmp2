@@ -72,4 +72,13 @@ int main()
   delete pCmd;
 
   dlclose(pLibHnd_Move);
+/*
+    Set4LibInterfaces Set;
+    std::istringstream stream;
+
+
+    Set.execPreprocesor("wywolanie.cmd",stream);
+    Set.init();
+    Set.execute(stream);
+*/
 }
