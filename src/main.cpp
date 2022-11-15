@@ -3,6 +3,7 @@
 #include <cassert>
 #include <cstdio>
 #include <sstream>
+#include <string>
 #include "LibInterface.hh"
 #include "Interp4Command.hh"
 #include "MobileObj.hh"
@@ -34,8 +35,8 @@ bool ExscPreprocesor(const char *NazwaPliku, istringstream &IStrm4Cmds)
     IStrm4Cmds.str(OTmpStrm.str());
     return pclose(pProc) == 0;
 }
-
 */
+
 int main()
 {
 
