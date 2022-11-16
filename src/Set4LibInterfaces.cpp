@@ -4,9 +4,7 @@ using namespace std;
 
 bool Set4LibInterfaces::init()
 {
-
-    std::string tekst = "libs/libInterp4Rotate.so";
-    rt->init(tekst);
+    rt->init("libs/libInterp4Rotate.so");
     ps->init("libs/libInterp4Pause.so");
     st->init("libs/libInterp4Set.so");
     mv->init("libs/libInterp4Move.so");
@@ -29,9 +27,9 @@ bool Set4LibInterfaces::execute(istringstream &stream)
 
     while (stream >> str)
     {
-        map<string, LibInterface *>::iterator it = Lib.find(str);
+        map<string, LibInterface *>::iterator it = Lib.find(str); //znajduje stringa
 
-
+        Lib_= it -> second; //wskaznik na biblioteke
         cmd = Lib_->CreateCmd();
         cmd->ReadParams(stream);
         cmd->PrintCmd();

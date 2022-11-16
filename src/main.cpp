@@ -39,13 +39,17 @@ bool ExscPreprocesor(const char *NazwaPliku, istringstream &IStrm4Cmds)
 
 int main()
 {
-
+    cout << "test" <<endl;
     Set4LibInterfaces Set;
+    cout <<"test2" <<endl;
     istringstream stream;
-
+    cout <<"test3" <<endl;
 
     ExscPreprocesor("dzialanie.cmd",stream);
+    cout <<"test4" <<endl;
     Set.init();
+    cout <<"test5" <<endl;
     Set.execute(stream);
+    cout <<"test6" <<endl;
 
 }
