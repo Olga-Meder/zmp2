@@ -17,11 +17,10 @@ private:
 
 public:
     bool init();
-
     LibInterface *rt = new LibInterface();
     LibInterface *ps = new LibInterface();
     LibInterface *st = new LibInterface();
     LibInterface *mv = new LibInterface();
 
-//    bool execute(std::istringstream &stream);
+    bool execute(std::istringstream &stream);
 };

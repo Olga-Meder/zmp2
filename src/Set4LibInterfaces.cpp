@@ -4,7 +4,9 @@ using namespace std;
 
 bool Set4LibInterfaces::init()
 {
-    rt->init("libs/libInterp4Rotate.so");
+
+    std::string tekst = "libs/libInterp4Rotate.so";
+    rt->init(tekst);
     ps->init("libs/libInterp4Pause.so");
     st->init("libs/libInterp4Set.so");
     mv->init("libs/libInterp4Move.so");
@@ -18,7 +20,7 @@ bool Set4LibInterfaces::init()
 }
 
 
-/*
+
 bool Set4LibInterfaces::execute(istringstream &stream)
 {
     string str;
@@ -28,20 +30,13 @@ bool Set4LibInterfaces::execute(istringstream &stream)
     while (stream >> str)
     {
         map<string, LibInterface *>::iterator it = Lib.find(str);
-        if (it == Lib.end())
-        {
-            cout << "Nie znaleziono wtyczki o nazwie: " << str << endl;
-            return 1;
-        }
 
-        Lib_ = it->second;
+
         cmd = Lib_->CreateCmd();
         cmd->ReadParams(stream);
-        cout << "Wykonaj:" << endl;
         cmd->PrintCmd();
         delete cmd;
     }
 
     return 0;
 }
- */
